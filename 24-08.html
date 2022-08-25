@@ -1,0 +1,41 @@
+<html>
+	<head>
+
+	</head>
+	<body>
+		<form action="" method="get">
+			<input type="checkbox" name="refeicao" id="cafe" value="C"/>
+			<label for="cafe">Café da manhã</label>
+			<input type="checkbox" name="refeicao" id="jantar" value="J"/>
+			<label for="Jantar">Jantar</label>
+			<br/>
+			<input name="turno" id="Matutino" type="radio" value="M"/>
+			<label for="Matutino">Matutino</label>
+			<input name="turno" id="Noturno" type="radio" value="N"/>
+			<label for="Noturno">Noturno</label>
+			<input name="turno" id="Vespertino" type="radio" value="V"/>
+			<label for="Vespertino">Vespertino</label>
+			<br/>
+			<select name="Estado" size="1">
+				<option value="">Selecione um estado</option>
+				<option value="SC">Santa Catarina</option>
+				<option value="PR">Paraná</option>
+				<option value="RS">Rio Grande Do Sul</option>
+			</select>
+			<br/>
+			<textarea name="descricao" cols="10" rows="8" placeholder="Preencha uma descrição"></textarea>
+			<br/>
+			<input type="text" name="disciplinas" list="disciplicas" placeholder="Adicione sua disciplina" required	/>
+			<datalist id="disciplicas">
+				<option value="Programação Web"></option>
+				<option value="Programação orientada a objetos"></option>
+				<option value="Engenharia de software"></option>
+			</datalist>
+			<br/>
+			<input type="date" name="data" placeholder="insira uma data"/>
+			<input type="number" name="idade" placeholder="Qual sua idade?"
+			<br/>
+			<input type="submit"/>
+		</form>
+	</body>
+</html>

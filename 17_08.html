@@ -1,0 +1,193 @@
+<!-- 
+	ANOTAÇÕES:
+	Aula sobre Tables
+	Site para acompanhamento: https://www.w3.org/WAI/tutorials/tables/
+	colspan="*NÚMERO DE COLUNAS PARA EXPANDIR*"
+	rowspan="*NÚMERO DE LINHAS PARA EXPANDIR"
+	Todos os textos devem estar dentro do TH ou do TD
+	TH -> CABEÇALHO
+	ESPERAMOS NO FINAL DA DISCIPLINA QUE TODOS OS ESTILOS SEJAM PELO CSS
+ -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Aula sobre Tables
+		</title>
+	</head>
+	<body>
+		<!-- EXERCÍCIO 1 -->
+		<table border="1" width="80%">
+			<caption>CSS3 Browser Support (latest browser versions)</caption>
+			<thead>
+				<tr>
+					<th>CSS Property</th>
+					<th>Internet Explorer</th>
+					<th>Firefox</th>
+					<th>Chrome</th>
+					<th>Safari</th>
+					<th>Opera</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Border Radius</th>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+				</tr>
+				<tr>
+					<th>Box Shadow</th>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>YES</td>
+				</tr>
+				<tr>
+					<th>CSS Animation</th>
+					<td>NO</td>
+					<td>NO</td>
+					<td>YES</td>
+					<td>YES</td>
+					<td>NO</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/><br/><br/><br/>
+		<!-- EXERCICIO 2 -->
+
+		<table border="1" bordercolor="blue" width="50%">
+			<caption>
+				Advanced HTML tag for Table using thread,tbody and tfoot
+			</caption>
+			<thead>
+				<tr>
+					<th colspan="3">Purchase order:987654321</th>
+					<th>Tutorial Brain - 10th Oct 2020</th>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<b>Vendor:</b><br/>
+						ABC XYZ ltd.<br/>
+						DUMMY STREE<br/>
+						BUILDING 1123<br/>
+						HAZARIBAGH, HARKHAND, 825301						
+					</td>
+					<td colspan="2">
+						<b>SHIP TO:</b>
+						MS DHONI<br/>
+						WILSON GARDEN<br/>
+						SOUTHEAST BLOCK, RANCHI - 834001
+					</td>
+				</tr>
+				<tr>
+					<th>Qty.</th>
+					<th>Item Code.</th>
+					<th>Description</th>
+					<th>Unit Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>100</td>
+					<td>IABCDE</td>
+					<td>Pencils</td>
+					<td>20.00</td>
+				</tr>
+				<tr>
+					<td>1000</td>
+					<td>IN877</td>
+					<td>Notebooks</td>
+					<td>100.00</td>
+				</tr>
+				<tr>
+					<td>500</td>
+					<td>IP8675</td>
+					<td>Pens</td>
+					<td>70.00</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<th colspan="3">Subtotal</th>
+					<td>190.00</td>
+				</tr>
+				<tr>
+					<th colspan="2">GST</th>
+					<td>5%</td>
+					<td>9.50</td>
+				</tr>
+				<tr>
+					<th colspan="3">Grand tutorials</th>
+					<td>$ 199.50</td>
+				</tr>
+			</tfoot>
+		</table>
+		<br/><br/><br/><br/>
+		<!-- EXERCICIO 3 -->
+		<table border="1" width="35%">
+			<thead>
+				<tr>
+					<th rowspan="3">Day</th>
+					<th colspan="3">Seminar</th>
+				</tr>
+				<tr>
+					<th colspan="2">Schedule</th>
+					<th rowspan="2">Topic</th>
+				</tr>
+				<tr>
+					<th>Begin</th>
+					<th>End</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan="2">Monday</td>
+					<td rowspan="2">8:00 a.m.</td>
+					<td rowspan="2">5:00 p.m.</td>
+					<td>Introduction to XML</td>
+				</tr>
+				<tr>
+					<td>Validity: DTD and Relax NG</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Tuesday</td>
+					<td>8:00 a.m.</td>
+					<td>11:00 a.m.</td>
+					<td rowspan="2">XPath</td>
+				</tr>
+				<tr>
+					<td>11:00 a.m.</td>
+					<td>2:00 p.m.</td>
+				</tr>
+				<tr>
+					<td>2:00 p.m.</td>
+					<td>5:00 p.m.</td>
+					<td>XSL Transformations</td>
+				</tr>
+				<tr>
+					<td>Wednesday</td>
+					<td>8:00 a.m.</td>
+					<td>12:00 p.m.</td>
+					<td>XSL Formatting Objects</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/><br/><br/><br/>
+		<!-- FORMULÀRIO -->
+		<form action="https://www.google.com.br/search" method="GET">
+			<input
+				name="q"
+				type="text"
+				size="20"
+				value="Digite Algo..."
+			/>
+			<input
+				type="submit"
+			/>
+		</form>
+	</body>
+</html>
