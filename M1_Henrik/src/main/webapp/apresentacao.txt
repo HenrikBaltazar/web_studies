@@ -1,0 +1,22 @@
+* FiltroLogin.java: É o endereço que responde
+ a requisição, ele vai verificar se os cookies
+ e variáveis de sessão existem, se sim 
+ irá redirecionar para o acesso restrito,
+ se não, irá redirecionar ao login.
+* login.html: Apenas um formulário do tipo post
+que enviará os dados ao autenticador.java,
+o tables facilita a diagramação e usei a tag
+style apenas para deixar a página mais 
+confortável
+* Autenticador.java: responsável por validar a 
+entrada do login e escrever as variáveis de 
+sessão e cookies e redirecionar para o filtro
+ou acesso restrito.
+response.sendRedirect(request.getContextPath() + "/login.html");
+response.getWriter().append("Served at: ").append(request.getContextPath());
+reaproveitei este arquivo fazendo o logout pelo
+metodo get, entao enquanto o post valida o login
+o get sempre fará o logout, removendo todas as
+variaveis de cookies e sessões e redirecionando
+novamente para a página inicial
+
