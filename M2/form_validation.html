@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Validação de formulario</title>
+		<script>
+
+			function formValido(){
+				let formulario = window.document.forms[0];
+				let nome = formulario.nome.value;
+				let campoSelect = cadastro.curso;
+				let curso = campoSelect.options[campoSelect.selectedIndex].value;
+				let campoTurno = formulario.turno;
+				let length = campoTurno.length;
+				let turno = "";
+				for(let i=0; i<length; i++){
+					if(campoTurno[i].checked){
+						turno = campoTurno[i].value;
+					}
+				}
+				console.log("verificando: ", nome, turno, curso);
+				if(nome!=="" && curso !=="" && turno!=""){
+					return true;
+				}else{
+					return false
+				}
+			}
+
+			function verificaForm(){
+				if(formValido()){
+					alert("Este é um formulário válido");
+				}else{
+					alert("Por favor preencha todos os campos")
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<form name="cadastro">
+			Nome: <input type="text" name="nome"/>
+			Turno:
+			<input type="radio" value="matutino" name="turno"/>
+			Matutino
+			<input type="radio" value="vespertino" name="turno"/>
+			Vespertino
+			<input type="radio" value="noturno" name="turno"/>
+			Noturno
+			<br/>
+			<select name="curso">
+				<option value="">-- Selecione --</option>
+				<option value="1">Arquitetura</option>
+				<option value="2">Cienci da computacao</option>
+				<option value="3">Direito</option>
+			</select>
+			<input type="button" onclick="verificaForm()" value="Enviar"/>
+		</form>
+	</body>
+</html>

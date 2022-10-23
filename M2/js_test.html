@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Testes de Javascript</title>
+		<script>
+
+			function exibeValorCampo(p1){
+				let formulario = window.document.cadastro;
+				let v1 = formulario.v1;
+				let turno = formulario.turno;
+				let length = turno.length;
+				for(let i=0; i<length; i++){
+					if(turno[i].checked){
+						console.log(turno[i].value);
+					}
+				}
+
+				let campoSelect = cadastro.curso;
+				let curso = campoSelect.options[campoSelect.selectedIndex].value;
+
+				console.log(p1, formulario, v1, v1.value);
+			}
+
+			function insert(){
+				let div=document.getElementById("el1");
+				div.innerHTML = "Texto dinamicamente inserido! <b>BOLD</b>"
+			}
+
+		</script>
+	</head>
+	<body>
+		<form name="cadastro">
+			Valor 1: <input type="text" name="v1" value="v1"/>
+			<input type="button" onclick="exibeValorCampo('Funcao')" value="processar"/>
+			Turno:
+			<input type="radio" value="matutino" checked="true" name="turno"/>
+			Matutino
+			<input type="radio" value="vespertino" name="turno"/>
+			Vespertino
+			<input type="radio" value="noturno" name="turno"/>
+			Noturno
+			<br/>
+			<select name="curso">
+				<option>Arquitetura</option>
+				<option>Cienci da computacao</option>
+				<option value="">Direito</option>
+			</select>
+		</form>
+		<div id="el1">
+
+		</div>
+		<input type="button" onclick="insert()" value="InsereConteudo"/>
+		<script>
+			
+		</script>
+	</body>
+</html>

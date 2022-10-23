@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script>
+			let x = 5;
+			window.alert(x);
+		</script>
+		<style>
+			#center {
+			width: 900px;
+			margin: auto;
+			}
+			#header, #sidebar-left, #sidebar-right, #content, #footer {
+			border: 2px solid black;
+			padding: 5px;
+			}
+			#sidebar-left, #sidebar-right {
+			margin-top: 10px;
+			width: 20%;
+			}
+			#sidebar-right {
+			float: right;
+			margin-left: 10px;
+			}
+			#sidebar-left {
+			float: left;
+			margin-right: 10px;
+			}
+			#content {
+			margin: 10px 5px;
+			width: 52%;
+			float: left;
+			}
+			#header, #footer {
+			clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<section style="border: 2px solid rgb(0,0,150);position:relative">
+			<h1>Propriedades Position</h1>
+			<div style="position:static;left:20px;border: 2px solid rgb(150,0,0) ">
+			Elemento com position static.
+			</div>
+			<div style="position:relative;left:20px;border: 2px solid rgb(150,0,150) ">
+			Elemento com position relative.
+			</div>
+			<div style="position:fixed;top:0px;left:20px;border: 2px solid rgb(0,150,0) ">
+			Elemento com position Fixed.
+			</div>
+			<div style="position:absolute;top:10px;left:270px;border: 2px solid rgb(150,150,0) ">
+			Elemento com position Absolute.
+			</div>
+			</section>
+			<div style="position:sticky;top:0px;left:570px;width:200px;border: 2px solid rgb(100,150,250) ">
+			Elemento com position sticky.
+			</div>
+		X<div>
+			DIV CONTEUDO
+		</div>Y
+		X<span>
+			SPAN CONTEUDO
+		</span>Y
+		<input type="text">
+		<input type="text" readonly>
+		<input type="color" value="#ffffff">
+		<div id="center">
+			<header id="header">
+			Header
+			</header>
+			<aside id="sidebar-left">
+			Left bar
+			</aside>
+			<div id="content">
+			Main content
+			</div>
+			<aside id="sidebar-right">
+			Right bar
+			</aside>
+			<footer id="footer">
+			Footer
+			</footer>
+			</div>
+	</body>
+</html>
