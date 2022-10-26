@@ -4,6 +4,7 @@
 		<style>
 			body{
 				background-color: lightgray;
+				font-family: Arial, sans-serif;
 			}
 			form { 
 				width: 50%;
@@ -41,6 +42,10 @@
 				font-weight: bold;
 				border: 0;
 				border-radius: 15px;
+				cursor: pointer;
+			}
+			input[type="submit"]:hover{
+				box-shadow: 10px 10px 20px lightblue;
 			}
 			input[type="button"]{
 				width: 25px;
@@ -50,12 +55,28 @@
 				font-size: 15px;
 				border: 0em;
 				font-weight: bold;
+				cursor: pointer;
+				text-align: center;
+			}
+			input[type="button"]:active, input[type="submit"]:active{
+				position:relative;
+				top:1px;
 			}
 			input[value="+"]{
 				background-color: lightgreen;
+				color: darkgreen;
+			}
+			input[value="+"]:hover{
+				box-shadow: 0px 0px 20px lightblue;
 			}
 			input[value="-"]{
 				background-color: white;
+			}
+			input[value="-"]:hover{
+				box-shadow: 0px 0px 20px lightcoral;
+			}
+			input[type="text"]:focus, select:focus, input[type="number"]:focus{
+				box-shadow: 0px 0px 10px cyan;
 			}
 			th{
 				width: 250px;
@@ -110,9 +131,9 @@
 				}
 				return valido;
 			}
-			function novoCampoSelect(celula){
+			function novoCampoSelect(celula,idLinha){
 				let newSelect = celula.appendChild(document.createElement("select"));
-				newSelect.name="instituicao";
+				newSelect.name="instituicao_"+idLinha;
 				let op1 = document.createElement("option");
 				op1.text = "Selecione";
 				op1.value = ""
@@ -134,17 +155,17 @@
 				let newInput = celula.appendChild(document.createElement("input"));
 				if(i === 0){
 					newInput.type="text"
-					newInput.name="nome";
+					newInput.name="nome_"+idLinha;
 					newInput.value=" ";
 				}else if(i === 1){
 					newInput.type="text"
-					newInput.name="email";
+					newInput.name="email_"+idLinha;
 					newInput.value='';
 				}else if(i === 3){
 					newInput.type="number";
 					newInput.min="1";
 					newInput.step="any";
-					newInput.name="payment";
+					newInput.name="payment_"+idLinha;
 					newInput.value="";
 				}else{
 					newInput.type="button";
@@ -167,7 +188,7 @@
 					novaCelula.name=i;
 					novaLinha.appendChild(novaCelula);
 					if(i === 2){
-						novoCampoSelect(novaCelula);
+						novoCampoSelect(novaCelula,novaLinha.id);
 					}else{
 						novoCampo(i,novaCelula,novaLinha.id);
 					}
