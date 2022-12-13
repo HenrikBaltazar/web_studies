@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>File Upload</title>
+		<meta charset="utf-8">
+		<script>
+			function uploadWithAjax(){
+				let form = document.forms[0];
+				let formData = new FormData(form);
+				let xhr = new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+				if(this.status==200 && this.readyState==4){
+				alert("Done");
+				}
+				}
+				xhr.open('POST',form.action , true);
+				xhr.send(formData);
+			}
+		</script>
+	</head>
+	<body>
+		<form method="POST" enctype="multipart/form-data " action="http://localhost:8080/M3_Henrik/FileUpload">
+			<input type="file" name="anexo" multiple/>
+			<input type="submit" />
+			<input type="button" value="Ajax!" onclick="uploadWithAjax()" />
+		</form>
+	</body>
+</html>

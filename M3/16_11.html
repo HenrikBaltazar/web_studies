@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script>
+			function carregaValores(){
+				let promiseFetch = window.fetch("contacts.json");
+				promiseFetch.then();
+
+				//let httpRequest = new XMLHttpRequest();
+				//console.log("this",this);
+				//httpRequest.onreadystatechange = function () {
+				//	console.log("this on ready",this.readyState, this.response);
+				//	if(this.status === 200 && this.readyState === 4){
+				//		let list = JSON.parse(this.response);
+				//		let select = document.getElementById("figures");
+				//		list.forEach(el => {
+				//			let option = document.createElement("option");
+				//			option.innerHTML = el.name;
+				//			select.appendChild(option);
+				//		})
+				//	}
+				//};
+				//httpRequest.open("GET","contacts.json");
+				//httpRequest.send();
+			}
+		</script>
+	</head>
+	<body>
+		<select id="figures">
+
+		</select>
+		<input type="button" value="Carregar" onclick="carregaValores()"/>
+	</body>
+</html>
